@@ -593,6 +593,7 @@ body {
     margin-top: 60px;
     line-height: 100px;
     text-align: center;
+    transition: all 1s;
 }
 
 #blog a {
@@ -602,6 +603,38 @@ body {
     letter-spacing: 3px;
     color: #00538C;
     text-decoration: none;
+}
+
+#blog:hover { /*Esto es para el botón*/
+    background-color: #333;
+    border: 10px solid #37bcf9;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px gray;
+    animation: blink 10s infinite linear;
+}
+
+#blog:hover a { /*Esto es para los enlaces*/
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
+}
+
+/*Aplicamos el efecto de cambiar color, mientras este el cursos encima del botón blog se va a ir cambiando de color*/
+@keyframes blink {
+    0% {
+        border: 10px solid #37bcf9;
+    }
+    25% {
+        border: 10px solid green;
+    }
+    50% {
+        border: 10px solid yellow;
+    }
+    75% {
+        border: 10px solid red;
+    }
+    100% {
+        border: 10px solid #37bcf9;
+    }
 }
 
 /* FOOTER */
@@ -658,6 +691,14 @@ body {
 #footer ul li a {
     display: block;
     height: 40px;
+    transition: all 300ms;
+}
+
+/*Cambiar el color del menu del footer*/
+#footer ul li:hover a {
+    padding-left: 40px;
+    color: white;
+    width: 100%;
 }
 
 #footer iframe {
