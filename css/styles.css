@@ -173,6 +173,18 @@ body {
     background: url("../img/bakbaner.png");
     background-position: -200px -200px;
     margin: 20px auto;
+    overflow: hidden; /*Esto siempre tiene que ir para esconder la animación*/
+    /*Animación para que el fondo del banner se mueva*/
+    animation: backBanner 10s linear;
+}
+
+@keyframes backBanner {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: -200px -200px;
+    }
 }
 
 #banner h1 {
@@ -185,6 +197,31 @@ body {
     letter-spacing: 2px;
     text-shadow: 2px 2px 1px black;
     margin: 27px auto;
+    /*Animación para que se mueva el texto de un lado a otro*/
+    animation: showText 10s linear;
+}
+
+@keyframes showText {
+    0% {
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1; /*Así siempre lo vamos a poder ver*/
+    }
+    50% {
+        transform: translateX(600%) scale(5,5);
+        opacity: 1; /*Así siempre lo vamos a poder ver*/
+    }
+    75% {
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0; /*Esto es para que se oculte el texto*/
+    }
+    100% {
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
 }
 
 /* TARJETAS */
