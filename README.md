@@ -7,6 +7,7 @@
 - Aplicar buenas prácticas para el diseño.
 - Estructuración eficiente del código y gestión de archivos.
 - Buenas prácticas de responsividad, transición y animaciones.
+- Creación de varios efectos avanzados.
 
 ## 🌎 Demo en línea
 
